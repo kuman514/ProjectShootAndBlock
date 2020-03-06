@@ -57,26 +57,99 @@ public class FullAutoWeaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Fire();
+        AltFire();
+        Reload();
+        ProcessTimers();
     }
 
     void Fire()
     {
+        if (Input.GetKey(InputManager.Fire) && IsFireable())
+        {
+            // Animation & Sound Effect
+            anim.CrossFadeInFixedTime("Fire", fireRate);
 
+            // Muzzle Flash
+
+            // Hit Scan
+
+            // Process
+            Debug.Log(weaponName + ": Fire");
+            fireTimer = 0;
+            currentAmmo--;
+        }
     }
 
     void AltFire()
     {
+        if (Input.GetKey(InputManager.AltFire) && IsAltFireable())
+        {
+            // Alt Fire Object
 
+            // Process
+            Debug.Log(weaponName + ": Alt Fire");
+            altFireTimer = 0;
+        }
     }
 
     void Reload()
     {
+        // Doesn't Need To Reload
+        if (currentAmmo >= ammoPerMag)
+        {
+            return;
+        }
 
+        if (IsReloaded())
+        {
+            if (currentAmmo <= 0 || Input.GetKeyDown(InputManager.Reload))
+            {
+                // Animation & Sound Effect
+                anim.CrossFadeInFixedTime("Reload", reloadTime);
+
+                // Process
+                reloading = 0;
+            }
+        }
     }
 
     void ProcessTimers()
     {
+        if (fireTimer < fireRate)
+        {
+            fireTimer += Time.deltaTime;
+        }
 
+        if (altFireTimer < altFireRate)
+        {
+            altFireTimer += Time.deltaTime;
+        }
+
+        if (reloading < reloadTime)
+        {
+            reloading += Time.deltaTime;
+
+            if (IsReloaded())
+            {
+                totalAmmo -= (ammoPerMag - currentAmmo);
+                currentAmmo = ammoPerMag;
+            }
+        }
+    }
+
+    bool IsFireable()
+    {
+        return (currentAmmo > 0 && fireTimer >= fireRate);
+    }
+
+    bool IsAltFireable()
+    {
+        return (altFireTimer >= altFireRate);
+    }
+
+    bool IsReloaded()
+    {
+        return (reloading >= reloadTime);
     }
 }
