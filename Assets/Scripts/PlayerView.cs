@@ -61,6 +61,7 @@ public class PlayerView : MonoBehaviour
 
 		rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 
+		rotationY = ClampAngle(rotationY, minimumY, maximumY);
 		rotArrayY.Add(rotationY);
 
 		if (rotArrayY.Count >= frameCounter)
@@ -89,6 +90,7 @@ public class PlayerView : MonoBehaviour
 
 	public static float ClampAngle(float angle, float min, float max)
 	{
+		/*
 		angle = angle % 360;
 		if ((angle >= -360F) && (angle <= 360F))
 		{
@@ -101,6 +103,7 @@ public class PlayerView : MonoBehaviour
 				angle -= 360F;
 			}
 		}
+		*/
 		return Mathf.Clamp(angle, min, max);
 	}
 }

@@ -706,13 +706,15 @@ MonoBehaviour:
   scatterReduction: 0
   damagePerRound: 0
   knockbackPerRound: 0
-  shootPoint: {fileID: 1668568030}
+  shootPoint: {fileID: 1922775405}
   anim: {fileID: 517938682}
   ammoUI: {fileID: 945226690}
   weaponSound: {fileID: 534669906}
   fireSE: {fileID: 8300000, guid: f4210a9ed7146b34da4f9c73b2542896, type: 3}
   reloadSE: {fileID: 8300000, guid: 07b3632a2678c6745bafd42477c14d8d, type: 3}
   hitHolePrefab: {fileID: 4072989075680267014, guid: 11892e412430dd54e8b1d63921e49e6b,
+    type: 3}
+  muzzleFlashPrefab: {fileID: 1782395880954752, guid: ac02d5053ed3d84419ea84a461030c31,
     type: 3}
 --- !u!95 &517938682 stripped
 Animator:
@@ -802,6 +804,7 @@ Transform:
   m_Children:
   - {fileID: 1105972392}
   - {fileID: 237547790}
+  - {fileID: 1922775405}
   m_Father: {fileID: 1603230503}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1179,12 +1182,42 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668568029}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.131, z: -0.606}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 365236432}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1922775404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1922775405}
+  m_Layer: 0
+  m_Name: AimPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1922775405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922775404}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 534669905}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070435879
 GameObject:

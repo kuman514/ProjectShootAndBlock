@@ -41,6 +41,7 @@ public class FullAutoWeaponManager : MonoBehaviour
     public AudioClip reloadSE;
 
     public GameObject hitHolePrefab;
+    public GameObject muzzleFlashPrefab;
     //public Vector3 recoilKickback;
     //public Transform casingExit;
     //public GameObject bulletCasing;
@@ -72,9 +73,48 @@ public class FullAutoWeaponManager : MonoBehaviour
             anim.CrossFadeInFixedTime("Fire", fireRate);
             weaponSound.PlayOneShot(fireSE);
 
-            // Muzzle Flash
+            // Shoot point flame
 
             // Hit Scan
+            RaycastHit hit;
+            if (Physics.Raycast(shootPoint.position, shootPoint.transform.forward + Random.onUnitSphere * curScatter, out hit, shootRange))
+            {
+                // if hit
+                Debug.Log(weaponName + " hit / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
+
+                // Muzzle Flash on the hit object
+                GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                muzzleFlash.transform.SetParent(hit.transform);
+                Destroy(muzzleFlash, 1f);
+
+                // marking bullets by using prefab
+                GameObject hitHole = Instantiate(hitHolePrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+                hitHole.transform.SetParent(hit.transform);
+                Destroy(hitHole, 5f);
+
+                // knockback needs hit hole not to have a Mesh Collider
+                // each hit hole needs their own mesh collider removed
+                Rigidbody rigidbody = hit.transform.GetComponent<Rigidbody>();
+                if (rigidbody != null)
+                {
+                    rigidbody.AddForceAtPosition(transform.forward * 5f * knockbackPerRound, transform.position);
+                }
+
+                /*
+                // hit HP reduction does so
+                // each hit hole needs their own mesh collider removed
+                HealthManager hitObjHP = hit.transform.GetComponent<HealthManager>();
+                if (hitObjHP != null)
+                {
+                    hitObjHP.Damage(damagePerRound);
+                }
+                */
+            }
+            else
+            {
+                // if miss
+                Debug.Log(weaponName + " miss / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
+            }
 
             // Process
             Debug.Log(weaponName + ": Fire");
