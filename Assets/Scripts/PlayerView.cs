@@ -61,7 +61,7 @@ public class PlayerView : MonoBehaviour
 
 		rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
 
-		rotationY = ClampAngle(rotationY, minimumY, maximumY);
+		rotationY = ClampAngle(rotationY, minimumY, maximumY);		// Required to prevent the issue about vertical view rotation
 		rotArrayY.Add(rotationY);
 
 		if (rotArrayY.Count >= frameCounter)

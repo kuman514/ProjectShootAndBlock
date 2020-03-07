@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerView.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
+    <Compile Include="Assets\Scripts\WeaponSwitcher.cs" />
     <None Include="Assets\Weapons\VZ61\Credits.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Unity/UnityProjects/ProjectShootAndBlock/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

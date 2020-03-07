@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
     private float originalMoveSpeed;
+    private bool moving;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = 0;
         vertical = 0;
         originalMoveSpeed = movementSpeed;
+        moving = false;
     }
 
     // Update is called once per frame
@@ -36,30 +38,38 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundMovement()
     {
+        moving = false;
         vertical = 0;
         horizontal = 0;
 
         if (Input.GetKey(InputManager.Forward))
         {
             vertical = 1;
+            moving = true;
         }
 
         if (Input.GetKey(InputManager.Backward))
         {
             vertical = -1;
+            moving = true;
         }
 
         if (Input.GetKey(InputManager.Left))
         {
             horizontal = -1;
+            moving = true;
         }
 
         if (Input.GetKey(InputManager.Right))
         {
             horizontal = 1;
+            moving = true;
         }
 
-        transform.Translate(new Vector3(horizontal, 0, vertical) * movementSpeed * Time.deltaTime);
+        if(moving)
+        {
+            transform.Translate(new Vector3(horizontal, 0, vertical) / Mathf.Sqrt(Mathf.Pow(vertical, 2) + Mathf.Pow(horizontal, 2)) * movementSpeed * Time.deltaTime);
+        }
     }
 
     void Jump()
@@ -67,12 +77,13 @@ public class PlayerMovement : MonoBehaviour
         if(jumpable && Input.GetKeyDown(InputManager.Jump))
         {
             rb.AddForce(0, jumpForce, 0);
+            jumpable = false;
         }
     }
 
     void Sprint()
     {
-        if(Input.GetKey(InputManager.Sprint))
+        if(Input.GetKey(InputManager.Sprint) && Input.GetKey(InputManager.Forward))
         {
             movementSpeed = originalMoveSpeed * SprintMult;
         }
