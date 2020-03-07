@@ -61,6 +61,7 @@ public class FullAutoWeaponManager : MonoBehaviour
         AltFire();
         Reload();
         ProcessTimers();
+        DrawUI();
     }
 
     void Fire()
@@ -69,6 +70,7 @@ public class FullAutoWeaponManager : MonoBehaviour
         {
             // Animation & Sound Effect
             anim.CrossFadeInFixedTime("Fire", fireRate);
+            weaponSound.PlayOneShot(fireSE);
 
             // Muzzle Flash
 
@@ -107,6 +109,7 @@ public class FullAutoWeaponManager : MonoBehaviour
             {
                 // Animation & Sound Effect
                 anim.CrossFadeInFixedTime("Reload", reloadTime);
+                weaponSound.PlayOneShot(reloadSE);
 
                 // Process
                 reloading = 0;
@@ -138,9 +141,14 @@ public class FullAutoWeaponManager : MonoBehaviour
         }
     }
 
+    void DrawUI()
+    {
+        ammoUI.text = currentAmmo + " / " + totalAmmo;
+    }
+
     bool IsFireable()
     {
-        return (currentAmmo > 0 && fireTimer >= fireRate);
+        return (currentAmmo > 0 && fireTimer >= fireRate && reloading >= reloadTime);
     }
 
     bool IsAltFireable()
