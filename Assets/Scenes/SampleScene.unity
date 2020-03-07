@@ -1148,7 +1148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3774549b2a8273f44a5c9063ec6ea277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 0
   sensitivityX: 15
   sensitivityY: 15
   minimumX: -360
@@ -1156,6 +1155,7 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   frameCounter: 10
+  cam: {fileID: 534669904}
 --- !u!1 &1668568029
 GameObject:
   m_ObjectHideFlags: 0
