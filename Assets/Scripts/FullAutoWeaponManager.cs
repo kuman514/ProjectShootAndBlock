@@ -132,13 +132,17 @@ public class FullAutoWeaponManager : MonoBehaviour
             // Process
             Debug.Log(weaponName + ": Alt Fire");
             altFireTimer = 0;
+
+            /* test
+             */
+            totalAmmo += ammoPerMag;
         }
     }
 
     void Reload()
     {
-        // Doesn't Need To Reload
-        if (currentAmmo >= ammoPerMag)
+        // Doesn't Need To (Or Can't) Reload
+        if (currentAmmo >= ammoPerMag || totalAmmo <= 0)
         {
             return;
         }
@@ -175,8 +179,27 @@ public class FullAutoWeaponManager : MonoBehaviour
 
             if (IsReloaded())
             {
-                totalAmmo -= (ammoPerMag - currentAmmo);
-                currentAmmo = ammoPerMag;
+                if (totalAmmo >= ammoPerMag)
+                {
+                    totalAmmo -= (ammoPerMag - currentAmmo);
+                    currentAmmo = ammoPerMag;
+                }
+                else
+                {
+                    int loadAmmo = currentAmmo + totalAmmo;
+                    int remainAmmo = loadAmmo - ammoPerMag;
+
+                    if(remainAmmo > 0)
+                    {
+                        currentAmmo = ammoPerMag;
+                        totalAmmo = remainAmmo;
+                    }
+                    else
+                    {
+                        currentAmmo = loadAmmo;
+                        totalAmmo = 0;
+                    }
+                }
             }
         }
     }
