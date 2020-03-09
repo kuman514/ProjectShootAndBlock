@@ -39,6 +39,7 @@ public class WeaponSwitcher : MonoBehaviour
             StartCoroutine(SwitchDelay(index));
         }
 
+        /*
         // weapon switching by alphanum
         for(int i = 49; i < 58; i++)
         {
@@ -47,6 +48,33 @@ public class WeaponSwitcher : MonoBehaviour
                 index = i - 49;
                 StartCoroutine(SwitchDelay(index));
             }
+        }
+        */
+
+        if (index != 0 && Input.GetKeyDown(InputManager.PrimaryWeapon) && !isSwitching)
+        {
+            index = 0;
+            StartCoroutine(SwitchDelay(index));
+        }
+
+        if (index != 1 && Input.GetKeyDown(InputManager.SecondaryWeapon) && !isSwitching)
+        {
+            index = 1;
+            StartCoroutine(SwitchDelay(index));
+        }
+
+        /*
+        if (index != 2 && Input.GetKeyDown(InputManager.UltimateWeapon) && !isSwitching)
+        {
+            index = 2;
+            StartCoroutine(SwitchDelay(index));
+        }
+        */
+
+        if (Input.GetKeyDown(InputManager.PriSecSwitch) && !isSwitching)
+        {
+            index = (index == 0) ? 1 : 0;
+            StartCoroutine(SwitchDelay(index));
         }
     }
 
