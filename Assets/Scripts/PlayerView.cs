@@ -51,7 +51,7 @@ public class PlayerView : MonoBehaviour
 		}
 		rotAverageX /= rotArrayX.Count;
 
-		rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+		//rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
 
 		Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
 		transform.localRotation = originalRotation * xQuaternion;
