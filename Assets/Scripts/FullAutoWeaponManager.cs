@@ -97,7 +97,7 @@ public class FullAutoWeaponManager : MonoBehaviour
                 Rigidbody rigidbody = hit.transform.GetComponent<Rigidbody>();
                 if (rigidbody != null)
                 {
-                    rigidbody.AddForceAtPosition(transform.forward * 5f * knockbackPerRound, transform.position);
+                    rigidbody.AddForceAtPosition(transform.forward * (-5f) * knockbackPerRound, transform.position);
                 }
 
                 // hit HP reduction does so
