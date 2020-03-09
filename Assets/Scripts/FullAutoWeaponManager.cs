@@ -100,7 +100,6 @@ public class FullAutoWeaponManager : MonoBehaviour
                     rigidbody.AddForceAtPosition(transform.forward * 5f * knockbackPerRound, transform.position);
                 }
 
-                /*
                 // hit HP reduction does so
                 // each hit hole needs their own mesh collider removed
                 HealthManager hitObjHP = hit.transform.GetComponent<HealthManager>();
@@ -108,7 +107,6 @@ public class FullAutoWeaponManager : MonoBehaviour
                 {
                     hitObjHP.Damage(damagePerRound);
                 }
-                */
             }
             else
             {
@@ -117,7 +115,6 @@ public class FullAutoWeaponManager : MonoBehaviour
             }
 
             // Process
-            Debug.Log(weaponName + ": Fire");
             fireTimer = 0;
             currentAmmo--;
         }
@@ -133,8 +130,7 @@ public class FullAutoWeaponManager : MonoBehaviour
             Debug.Log(weaponName + ": Alt Fire");
             altFireTimer = 0;
 
-            /* test
-             */
+            // just for test
             totalAmmo += ammoPerMag;
         }
     }
