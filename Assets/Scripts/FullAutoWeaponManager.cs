@@ -80,7 +80,7 @@ public class FullAutoWeaponManager : MonoBehaviour
             if (Physics.Raycast(shootPoint.position, shootPoint.transform.forward + Random.onUnitSphere * curScatter, out hit, shootRange))
             {
                 // if hit
-                Debug.Log(weaponName + " hit / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
+                //Debug.Log(weaponName + " hit / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
 
                 // Muzzle Flash on the hit object
                 GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
@@ -111,7 +111,7 @@ public class FullAutoWeaponManager : MonoBehaviour
             else
             {
                 // if miss
-                Debug.Log(weaponName + " miss / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
+                //Debug.Log(weaponName + " miss / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
             }
 
             // Process
