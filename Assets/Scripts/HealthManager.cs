@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HealthManager : MonoBehaviour
 
     // References
     public GameObject destroyWhenHPIs0;
+    public Text HPUI;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,11 @@ public class HealthManager : MonoBehaviour
         if(curHP <= 0)
         {
             Destroy(destroyWhenHPIs0);
+        }
+
+        if(HPUI != null)
+        {
+            HPUI.text = curHP + " / " + maxHP;
         }
     }
 

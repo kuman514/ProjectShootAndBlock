@@ -38,7 +38,7 @@ public class LinearProjectile : MonoBehaviour
         Rigidbody rigidbody = col.gameObject.transform.GetComponent<Rigidbody>();
         if (rigidbody != null)
         {
-            rigidbody.AddForceAtPosition(transform.forward * (-5f) * knockback, transform.position);
+            rigidbody.AddForceAtPosition(transform.forward * (5f) * knockback, transform.position);
         }
 
         if(col != null)
