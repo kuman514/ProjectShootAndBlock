@@ -1034,7 +1034,7 @@ MonoBehaviour:
   scatterReduction: 0.0005
   damagePerRound: 25
   knockbackPerRound: 10
-  altFireForce: {x: 0, y: 300, z: 300}
+  altFireForce: {x: 0, y: 100, z: 600}
   shootPoint: {fileID: 1922775405}
   altFirePoint: {fileID: 650869112}
   anim: {fileID: 517938682}

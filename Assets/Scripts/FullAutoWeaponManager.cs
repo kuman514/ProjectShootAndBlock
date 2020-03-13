@@ -134,8 +134,9 @@ public class FullAutoWeaponManager : MonoBehaviour
             Rigidbody altFireRB = altFireObject.transform.GetComponent<Rigidbody>();
             if(altFireRB != null)
             {
-                altFireRB.AddForce(altFireForce);
+                altFireRB.AddRelativeForce(altFireForce);
             }
+            altFireObject.transform.SetParent(null);
 
             // Process
             Debug.Log(weaponName + ": Alt Fire");
