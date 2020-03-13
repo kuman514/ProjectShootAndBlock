@@ -1046,7 +1046,7 @@ MonoBehaviour:
     type: 3}
   muzzleFlashPrefab: {fileID: 1782395880954752, guid: ac02d5053ed3d84419ea84a461030c31,
     type: 3}
-  altFirePrefab: {fileID: 4812612513798799330, guid: 0e939330819a0bd4a854c16a42c7db1b,
+  altFirePrefab: {fileID: 7084148290478403443, guid: 33d81cfdfa2bbfc4ea71c6decd60a922,
     type: 3}
 --- !u!1001 &503611455
 PrefabInstance:
@@ -1896,7 +1896,7 @@ PrefabInstance:
     - target: {fileID: 1709643704747816367, guid: 0265e9ad9152806449643a60ae537b8f,
         type: 3}
       propertyPath: speed
-      value: 2
+      value: 7.45
       objectReference: {fileID: 0}
     - target: {fileID: 9160515820742863766, guid: 0265e9ad9152806449643a60ae537b8f,
         type: 3}
