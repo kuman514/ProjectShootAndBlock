@@ -24,6 +24,9 @@ public class FullAutoWeaponManager : MonoBehaviour
     public float damagePerRound;
     public float knockbackPerRound;
 
+    //public float altFireDamage;
+    public Vector3 altFireForce;
+
     // Inner Active
     private float fireTimer;
     private float altFireTimer;
@@ -32,6 +35,7 @@ public class FullAutoWeaponManager : MonoBehaviour
 
     // Component References
     public Transform shootPoint;
+    public Transform altFirePoint;
 
     public Animator anim;
     public Text ammoUI;
@@ -42,6 +46,7 @@ public class FullAutoWeaponManager : MonoBehaviour
 
     public GameObject hitHolePrefab;
     public GameObject muzzleFlashPrefab;
+    public GameObject altFirePrefab;
     //public Vector3 recoilKickback;
     //public Transform casingExit;
     //public GameObject bulletCasing;
@@ -125,13 +130,17 @@ public class FullAutoWeaponManager : MonoBehaviour
         if (Input.GetKey(InputManager.AltFire) && IsAltFireable())
         {
             // Alt Fire Object
+            GameObject altFireObject = Instantiate(altFirePrefab, altFirePoint);
+            Rigidbody altFireRB = altFireObject.transform.GetComponent<Rigidbody>();
+            if(altFireRB != null)
+            {
+                altFireRB.AddForce(altFireForce);
+            }
 
             // Process
             Debug.Log(weaponName + ": Alt Fire");
             altFireTimer = 0;
-
-            // just for test
-            totalAmmo += ammoPerMag;
+            fireTimer = -0.3f;
         }
     }
 
