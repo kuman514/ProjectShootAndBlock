@@ -261,6 +261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target
       objectReference: {fileID: 0}
+    - target: {fileID: 3485484559889813556, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3485484559889813560, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1832,6 +1837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SampleProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 1709643704747816352, guid: 0265e9ad9152806449643a60ae537b8f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 1709643704747816364, guid: 0265e9ad9152806449643a60ae537b8f,
         type: 3}

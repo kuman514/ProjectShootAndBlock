@@ -11,15 +11,15 @@ public class LinearProjectile : MonoBehaviour
     public float lifeSpan;
 
     // Inner Active
-    // None yet
+    private GameObject ObjectToDestroy;
 
     // Component Reference
-    public GameObject ObjectToDestroy;
+    // None yet
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        ObjectToDestroy = this.transform.gameObject;
     }
 
     // Update is called once per frame
