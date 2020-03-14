@@ -83,13 +83,29 @@ public class PlayerMovement : MonoBehaviour
 
     void Sprint()
     {
-        if(Input.GetKey(InputManager.Sprint) && Input.GetKey(InputManager.Forward))
+        if (SprintMult <= 1)
         {
-            movementSpeed = originalMoveSpeed * SprintMult;
+            // If sprint key makes player slower
+            if (Input.GetKey(InputManager.Sprint))
+            {
+                movementSpeed = originalMoveSpeed * SprintMult;
+            }
+            else
+            {
+                movementSpeed = originalMoveSpeed;
+            }
         }
         else
         {
-            movementSpeed = originalMoveSpeed;
+            // If sprint key makes player faster
+            if (Input.GetKey(InputManager.Sprint) && Input.GetKey(InputManager.Forward))
+            {
+                movementSpeed = originalMoveSpeed * SprintMult;
+            }
+            else
+            {
+                movementSpeed = originalMoveSpeed;
+            }
         }
     }
 
