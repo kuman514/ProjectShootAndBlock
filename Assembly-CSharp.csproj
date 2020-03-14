@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\LinearProjectile.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerView.cs" />
+    <Compile Include="Assets\Scripts\SampleEnemyAttackManager.cs" />
     <Compile Include="Assets\Scripts\ShieldManager.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
     <Compile Include="Assets\Scripts\WeaponSwitcher.cs" />

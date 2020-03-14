@@ -139,7 +139,7 @@ public class FullAutoWeaponManager : MonoBehaviour
             altFireObject.transform.SetParent(null);
 
             // Process
-            Debug.Log(weaponName + ": Alt Fire");
+            ///Debug.Log(weaponName + ": Alt Fire");
             altFireTimer = 0;
             fireTimer = -0.3f;
         }
