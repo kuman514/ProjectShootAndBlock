@@ -36,6 +36,7 @@ public class FullAutoWeaponManager : MonoBehaviour
     // Component References
     public Transform shootPoint;
     public Transform altFirePoint;
+    public Transform pointFlameSpot;
 
     public Animator anim;
     public Text ammoUI;
@@ -47,6 +48,7 @@ public class FullAutoWeaponManager : MonoBehaviour
     public GameObject hitHolePrefab;
     public GameObject muzzleFlashPrefab;
     public GameObject altFirePrefab;
+    public GameObject pointFlamePrefab;
     //public Vector3 recoilKickback;
     //public Transform casingExit;
     //public GameObject bulletCasing;
@@ -79,6 +81,8 @@ public class FullAutoWeaponManager : MonoBehaviour
             weaponSound.PlayOneShot(fireSE);
 
             // Shoot point flame
+            GameObject pointFlame = Instantiate(pointFlamePrefab, pointFlameSpot);
+            Destroy(pointFlame, fireRate / 2);
 
             // Hit Scan
             RaycastHit hit;
