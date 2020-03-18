@@ -822,6 +822,8 @@ MonoBehaviour:
     type: 3}
   altFirePrefab: {fileID: 7084148290478403443, guid: 33d81cfdfa2bbfc4ea71c6decd60a922,
     type: 3}
+  shootFlamePrefab: {fileID: 1782395880954752, guid: ac02d5053ed3d84419ea84a461030c31,
+    type: 3}
   pointFlamePrefab: {fileID: 5399195668872994325, guid: 77b37e7bdc6597243b459a5bca00eeb3,
     type: 3}
 --- !u!1001 &503611455
@@ -1842,7 +1844,7 @@ GameObject:
   - component: {fileID: 1393397460}
   m_Layer: 0
   m_Name: High Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -48,6 +48,7 @@ public class FullAutoWeaponManager : MonoBehaviour
     public GameObject hitHolePrefab;
     public GameObject muzzleFlashPrefab;
     public GameObject altFirePrefab;
+    public GameObject shootFlamePrefab;
     public GameObject pointFlamePrefab;
     //public Vector3 recoilKickback;
     //public Transform casingExit;
@@ -81,6 +82,8 @@ public class FullAutoWeaponManager : MonoBehaviour
             weaponSound.PlayOneShot(fireSE);
 
             // Shoot point flame
+            GameObject shootFlame = Instantiate(shootFlamePrefab, pointFlameSpot);
+            Destroy(shootFlame, fireRate);
             GameObject pointFlame = Instantiate(pointFlamePrefab, pointFlameSpot);
             Destroy(pointFlame, fireRate / 2);
 
