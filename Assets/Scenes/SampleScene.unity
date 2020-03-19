@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 1603230502}
   - component: {fileID: 1603230501}
   - component: {fileID: 1603230500}
-  - component: {fileID: 1603230504}
+  - component: {fileID: 1603230508}
   - component: {fileID: 1603230505}
   - component: {fileID: 1603230506}
   - component: {fileID: 1603230507}
@@ -2109,22 +2109,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1603230504
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603230499}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!114 &1603230505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,6 +2160,24 @@ MonoBehaviour:
   maxHP: 100
   destroyWhenHPIs0: {fileID: 1603230499}
   HPUI: {fileID: 360467631}
+--- !u!143 &1603230508
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603230499}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1668568029
 GameObject:
   m_ObjectHideFlags: 0

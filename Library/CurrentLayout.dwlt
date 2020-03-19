@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 14
+  controlID: 61
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 27
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 28
+  controlID: 63
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 3482
+  m_LastSelectedObjectID: 3464
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -476,19 +476,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Effects/MuzzleFlash
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Effects/MuzzleFlash
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\ProjectShootAndBlock
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 126}
-    m_SelectedIDs: e60a0000
-    m_LastClickedID: 2790
+    m_SelectedIDs: fa090000
+    m_LastClickedID: 2554
     m_ExpandedIDs: 00000000a4090000d8090000620a0000720a0000d40a00001a0b0000480b00004c0c00005c0c00000e2b0000102b0000122b0000142b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -636,9 +636,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9a0d0000
-      m_LastClickedID: 3482
-      m_ExpandedIDs: defbffff0a0d00001c0d0000420d0000460d00004c0d0000880d0000a20d0000
+      m_SelectedIDs: 880d0000
+      m_LastClickedID: 3464
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
