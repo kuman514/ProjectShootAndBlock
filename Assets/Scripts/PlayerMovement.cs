@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     // Inner Active
     private Rigidbody rb;
-    private CharacterController cc;
     private bool jumpable;
     private float horizontal;
     private float vertical;
@@ -22,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        cc = GetComponent<CharacterController>();
         jumpable = false;
         horizontal = 0;
         vertical = 0;
@@ -70,8 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(moving)
         {
-            //transform.Translate(new Vector3(horizontal, 0, vertical) / Mathf.Sqrt(Mathf.Pow(vertical, 2) + Mathf.Pow(horizontal, 2)) * movementSpeed * Time.deltaTime);
-            cc.Move(new Vector3(horizontal, 0, vertical) / Mathf.Sqrt(Mathf.Pow(vertical, 2) + Mathf.Pow(horizontal, 2)) * movementSpeed * Time.deltaTime);
+            transform.Translate(new Vector3(horizontal, 0, vertical) / Mathf.Sqrt(Mathf.Pow(vertical, 2) + Mathf.Pow(horizontal, 2)) * movementSpeed * Time.deltaTime);
         }
     }
 
