@@ -1292,7 +1292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993edb7d0ee20914fbd98d7d057bf24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lengthToChangeMode: 0.2
   MissileUI: {fileID: 945226690}
+  anim: {fileID: 503611458}
 --- !u!1 &945226688
 GameObject:
   m_ObjectHideFlags: 0

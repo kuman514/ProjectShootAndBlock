@@ -39,7 +39,8 @@ public class LinearProjectile : MonoBehaviour
             GameObject OnArm = HeadCam.transform.GetChild(0).gameObject;
             GameObject WeaponSway = OnArm.transform.GetChild(0).gameObject;
             GameObject Shield = WeaponSway.transform.Find("Shield").gameObject;
-            if (Shield != null && Shield.activeSelf == true)
+            ShieldManager ShieldMng = Shield.transform.GetComponent<ShieldManager>();
+            if (Shield != null && Shield.activeSelf == true && !ShieldMng.GetAttackModeStatus())
             {
                 Destroy(ObjectToDestroy);
                 return;

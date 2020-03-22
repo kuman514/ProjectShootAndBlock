@@ -9,17 +9,21 @@ public class ShieldManager : MonoBehaviour
     //public int maxMissiles;
     //public int currentMissiles;
     //public float chargeTimePerMissile;
+    public float lengthToChangeMode;
 
     // Inner Active
     //private float currentChargeTimer;
+    private bool isAttackReady;
 
     // Component References
     public Text MissileUI;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         //currentChargeTimer = chargeTimePerMissile;
+        isAttackReady = false;
     }
 
     // Update is called once per frame
@@ -33,21 +37,48 @@ public class ShieldManager : MonoBehaviour
 
     void Fire()
     {
+        if(isAttackReady && Input.GetKeyDown(InputManager.Fire))
+        {
 
+        }
     }
 
     void AltFire()
     {
+        if(Input.GetKeyDown(InputManager.AltFire))
+        {
+            if(!isAttackReady)
+            {
+                anim.CrossFadeInFixedTime("AttackMode", lengthToChangeMode);
+            }
 
+            isAttackReady = !isAttackReady;
+            anim.SetBool("IsAttackReady", isAttackReady);
+        }
     }
 
     void ChargeMissiles()
     {
+        if(!isAttackReady)
+        {
 
+        }
     }
 
     void DrawUI()
     {
-        MissileUI.text = "Force Shield";
+        if(isAttackReady)
+        {
+            MissileUI.text = "Missile Attack Mode";
+        }
+        else
+        {
+            MissileUI.text = "Force Shield";
+        }
+    }
+
+    public bool GetAttackModeStatus()
+    {
+        return isAttackReady;
     }
 }
