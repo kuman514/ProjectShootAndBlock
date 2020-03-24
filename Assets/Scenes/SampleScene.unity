@@ -1383,7 +1383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 993edb7d0ee20914fbd98d7d057bf24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMissiles: 12
+  currentMissiles: 12
+  chargeTimePerMissile: 0.5
   lengthToChangeMode: 0.2
+  fireRate: 0.1
   MissileUI: {fileID: 945226690}
   anim: {fileID: 503611458}
 --- !u!1 &945226688
