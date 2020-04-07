@@ -807,7 +807,8 @@ MonoBehaviour:
   scatterReduction: 0.0005
   damagePerRound: 25
   knockbackPerRound: 10
-  altFireForce: {x: 0, y: 100, z: 600}
+  altFireForce: {x: 0, y: 50, z: 800}
+  infiniteReload: 1
   shootPoint: {fileID: 1922775405}
   altFirePoint: {fileID: 650869112}
   pointFlameSpot: {fileID: 1668568030}
@@ -1390,6 +1391,7 @@ MonoBehaviour:
   fireRate: 0.1
   MissileUI: {fileID: 945226690}
   anim: {fileID: 503611458}
+  missilePrefab: {fileID: 0}
 --- !u!1 &945226688
 GameObject:
   m_ObjectHideFlags: 0

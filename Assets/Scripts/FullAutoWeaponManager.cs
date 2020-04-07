@@ -27,6 +27,8 @@ public class FullAutoWeaponManager : MonoBehaviour
     //public float altFireDamage;
     public Vector3 altFireForce;
 
+    public bool infiniteReload;
+
     // Inner Active
     private float fireTimer;
     private float altFireTimer;
@@ -157,7 +159,10 @@ public class FullAutoWeaponManager : MonoBehaviour
         // Doesn't Need To (Or Can't) Reload
         if (currentAmmo >= ammoPerMag || totalAmmo <= 0)
         {
-            return;
+            if (!infiniteReload)
+            {
+                return;
+            }
         }
 
         if (IsReloaded())
@@ -192,25 +197,32 @@ public class FullAutoWeaponManager : MonoBehaviour
 
             if (IsReloaded())
             {
-                if (totalAmmo >= ammoPerMag)
+                if(infiniteReload)
                 {
-                    totalAmmo -= (ammoPerMag - currentAmmo);
                     currentAmmo = ammoPerMag;
                 }
                 else
                 {
-                    int loadAmmo = currentAmmo + totalAmmo;
-                    int remainAmmo = loadAmmo - ammoPerMag;
-
-                    if(remainAmmo > 0)
+                    if (totalAmmo >= ammoPerMag)
                     {
+                        totalAmmo -= (ammoPerMag - currentAmmo);
                         currentAmmo = ammoPerMag;
-                        totalAmmo = remainAmmo;
                     }
                     else
                     {
-                        currentAmmo = loadAmmo;
-                        totalAmmo = 0;
+                        int loadAmmo = currentAmmo + totalAmmo;
+                        int remainAmmo = loadAmmo - ammoPerMag;
+
+                        if (remainAmmo > 0)
+                        {
+                            currentAmmo = ammoPerMag;
+                            totalAmmo = remainAmmo;
+                        }
+                        else
+                        {
+                            currentAmmo = loadAmmo;
+                            totalAmmo = 0;
+                        }
                     }
                 }
             }
@@ -219,7 +231,14 @@ public class FullAutoWeaponManager : MonoBehaviour
 
     void DrawUI()
     {
-        ammoUI.text = currentAmmo + " / " + totalAmmo;
+        if(infiniteReload)
+        {
+            ammoUI.text = currentAmmo + " / " + ammoPerMag;
+        }
+        else
+        {
+            ammoUI.text = currentAmmo + " / " + totalAmmo;
+        }
     }
 
     bool IsFireable()
