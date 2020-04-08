@@ -13,6 +13,7 @@ public class EnemyAttacks : MonoBehaviour
     // Component References
     public Transform attackSpawnPoint;
     public GameObject projectilePrefab;
+    public Transform attackTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class EnemyAttacks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(attackTarget);
     }
 
     public void SpawnRaycastAttack()

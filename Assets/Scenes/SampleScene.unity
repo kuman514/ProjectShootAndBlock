@@ -2545,6 +2545,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1985952517479373524, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
+        type: 3}
+      propertyPath: curHP
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985952517479373524, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
+        type: 3}
+      propertyPath: maxHP
+      value: 5000
+      objectReference: {fileID: 0}
     - target: {fileID: 1985952517479373526, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2600,6 +2610,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1985952517479373527, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
+        type: 3}
+      propertyPath: attackTarget
+      value: 
+      objectReference: {fileID: 1603230503}
     - target: {fileID: 1985952517479373531, guid: 3fa2b76c1c5802d4ebc1a498fce229f7,
         type: 3}
       propertyPath: m_Name
