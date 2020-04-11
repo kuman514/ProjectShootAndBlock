@@ -21,6 +21,7 @@ public class ShieldManager : MonoBehaviour
     public Text MissileUI;
     public Animator anim;
     public GameObject missilePrefab;
+    public Transform missilePoint;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,8 @@ public class ShieldManager : MonoBehaviour
         {
             if(IsFireable())
             {
-                //GameObject missile = Instantiate(missilePrefab);
+                GameObject missile = Instantiate(missilePrefab, missilePoint);
+                missile.transform.SetParent(null);
 
                 currentMissiles--;
                 fireTimer = 0;
