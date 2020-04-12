@@ -11,6 +11,7 @@ public class ShieldManager : MonoBehaviour
     public float chargeTimePerMissile;
     public float lengthToChangeMode;
     public float fireRate;
+    public float missileTargetRange;
 
     // Inner Active
     private float currentChargeTimer;
@@ -47,7 +48,17 @@ public class ShieldManager : MonoBehaviour
         {
             if(IsFireable())
             {
+                RaycastHit hit;
+                Transform targetPos;
+                Physics.Raycast(missilePoint.position, missilePoint.transform.forward, out hit, missileTargetRange);
+                targetPos = hit.transform;
+
                 GameObject missile = Instantiate(missilePrefab, missilePoint);
+                ShieldMissile sm = missile.transform.GetComponent<ShieldMissile>();
+                if(targetPos != null && hit.transform.gameObject.CompareTag("Enemy"))
+                {
+                    sm.target = targetPos;
+                }
                 missile.transform.SetParent(null);
 
                 currentMissiles--;
