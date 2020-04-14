@@ -45,4 +45,12 @@ public class GrenadeDetonation : MonoBehaviour
     {
         Destroy(objectToDetonate);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Explode();
+        }
+    }
 }
