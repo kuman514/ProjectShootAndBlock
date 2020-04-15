@@ -17,12 +17,15 @@ public class ShieldManager : MonoBehaviour
     private float currentChargeTimer;
     private float fireTimer;
     private bool isAttackReady;
+    private AudioSource shieldAudio;
 
     // Component References
     public Text MissileUI;
     public Animator anim;
     public GameObject missilePrefab;
     public Transform missilePoint;
+    public AudioClip missileFireSE;
+    public AudioClip shieldBlockSE;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class ShieldManager : MonoBehaviour
         currentChargeTimer = 0;
         fireTimer = 0;
         isAttackReady = false;
+        shieldAudio = transform.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -119,5 +123,13 @@ public class ShieldManager : MonoBehaviour
     bool IsFireable()
     {
         return (fireTimer >= fireRate && currentMissiles > 0);
+    }
+
+    void PlayShieldBlockSE()
+    {
+        if (shieldAudio != null && shieldBlockSE != null)
+        {
+            shieldAudio.PlayOneShot(shieldBlockSE);
+        }
     }
 }

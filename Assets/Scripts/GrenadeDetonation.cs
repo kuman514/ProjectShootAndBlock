@@ -12,16 +12,18 @@ public class GrenadeDetonation : MonoBehaviour
 
     // Inner Active
     private GameObject objectToDetonate;
+    private AudioSource grenadeAudio;
 
     // Component Reference
     public GameObject detonationEffect;
-    public AudioClip detonationSound;
-    public AudioSource detonationSpeaker;
+    public AudioClip detonationSE;
+    public AudioClip collisionSE;
 
     // Start is called before the first frame update
     void Start()
     {
         objectToDetonate = this.transform.gameObject;
+        grenadeAudio = transform.GetComponent<AudioSource>();
         Debug.Log(objectToDetonate.name);
     }
 
@@ -43,6 +45,11 @@ public class GrenadeDetonation : MonoBehaviour
 
     void Explode()
     {
+        if (grenadeAudio != null && detonationSE != null)
+        {
+            grenadeAudio.PlayOneShot(detonationSE);
+        }
+        
         Destroy(objectToDetonate);
     }
 
@@ -51,6 +58,11 @@ public class GrenadeDetonation : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Explode();
+        }
+
+        if (grenadeAudio != null && collisionSE != null)
+        {
+            grenadeAudio.PlayOneShot(collisionSE);
         }
     }
 }
