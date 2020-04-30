@@ -31,22 +31,6 @@ public class LinearProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        // Getting Shield active
-        if(col.gameObject.transform.CompareTag("Player"))
-        {
-            GameObject Player = col.gameObject;
-            GameObject HeadCam = Player.transform.GetChild(0).gameObject;
-            GameObject OnArm = HeadCam.transform.GetChild(0).gameObject;
-            GameObject WeaponSway = OnArm.transform.GetChild(0).gameObject;
-            GameObject Shield = WeaponSway.transform.Find("Shield").gameObject;
-            ShieldManager ShieldMng = Shield.transform.GetComponent<ShieldManager>();
-            if (Shield != null && Shield.activeSelf == true && !ShieldMng.GetAttackModeStatus())
-            {
-                Destroy(ObjectToDestroy);
-                return;
-            }
-        }
-
         HealthManager hitObjHP = col.gameObject.transform.GetComponent<HealthManager>();
         if (hitObjHP != null)
         {
