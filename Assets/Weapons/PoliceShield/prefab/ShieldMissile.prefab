@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5683771516864450836}
   - component: {fileID: 5683771516864450837}
   - component: {fileID: 5683771516864450841}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShieldMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
