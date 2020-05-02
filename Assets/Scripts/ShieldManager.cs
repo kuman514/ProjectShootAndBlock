@@ -26,6 +26,7 @@ public class ShieldManager : MonoBehaviour
     public Transform missilePoint;
     public AudioClip missileFireSE;
     public AudioClip shieldBlockSE;
+    public BoxCollider shieldBody;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,15 @@ public class ShieldManager : MonoBehaviour
 
             isAttackReady = !isAttackReady;
             anim.SetBool("IsAttackReady", isAttackReady);
+
+            if (isAttackReady)
+            {
+                shieldBody.enabled = false;
+            }
+            else
+            {
+                shieldBody.enabled = true;
+            }
         }
     }
 
