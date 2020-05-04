@@ -40,11 +40,17 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetStatus();
         Fire();
         AltFire();
         ChargeMissiles();
         ProcessTimer();
         DrawUI();
+    }
+
+    void GetStatus()
+    {
+        isAttackReady = anim.GetBool("IsAttackReady");
     }
 
     void Fire()
