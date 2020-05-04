@@ -40,7 +40,6 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ActiveStatus();
         Fire();
         AltFire();
         ChargeMissiles();
@@ -77,22 +76,19 @@ public class ShieldManager : MonoBehaviour
     {
         if(Input.GetKeyDown(InputManager.AltFire))
         {
-            if(!isAttackReady)
-            {
-                anim.CrossFadeInFixedTime("AttackMode", lengthToChangeMode);
-            }
-
             isAttackReady = !isAttackReady;
-            anim.SetBool("IsAttackReady", isAttackReady);
 
             if (isAttackReady)
             {
+                anim.CrossFadeInFixedTime("AttackMode", lengthToChangeMode);
                 shieldBody.enabled = false;
             }
             else
             {
                 shieldBody.enabled = true;
             }
+
+            anim.SetBool("IsAttackReady", isAttackReady);
         }
     }
 
@@ -141,14 +137,6 @@ public class ShieldManager : MonoBehaviour
         if (shieldAudio != null && shieldBlockSE != null)
         {
             shieldAudio.PlayOneShot(shieldBlockSE);
-        }
-    }
-
-    void ActiveStatus()
-    {
-        if(!this.transform.gameObject.activeSelf)
-        {
-            isAttackReady = false;
         }
     }
 }
