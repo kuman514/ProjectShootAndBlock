@@ -12,7 +12,7 @@ public class ShieldMissile : MonoBehaviour
     // None Yet
 
     // Component References
-    public Transform target;
+    public GameObject target;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class ShieldMissile : MonoBehaviour
     {
         if(target != null)
         {
-            transform.LookAt(target);
+            transform.LookAt(target.transform);
         }
     }
 
@@ -44,9 +44,17 @@ public class ShieldMissile : MonoBehaviour
     {
         if (collision.gameObject.transform.CompareTag("Player"))
         {
+            Debug.Log("Player Missile Collide");
             return;
         }
 
+        if (collision.gameObject.transform.CompareTag("Projectile"))
+        {
+            Debug.Log("Projectile Missile Collide");
+            return;
+        }
+
+        Debug.Log("Missile Collide");
         HealthManager hitHP = collision.gameObject.transform.GetComponent<HealthManager>();
         if(hitHP != null)
         {

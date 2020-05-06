@@ -60,9 +60,9 @@ public class ShieldManager : MonoBehaviour
             if(IsFireable())
             {
                 RaycastHit hit;
-                Transform targetPos;
+                GameObject targetPos;
                 Physics.Raycast(missilePoint.position, missilePoint.transform.forward, out hit, missileTargetRange);
-                targetPos = hit.transform;
+                targetPos = hit.transform.gameObject;
 
                 GameObject missile = Instantiate(missilePrefab, missilePoint);
                 ShieldMissile sm = missile.transform.GetComponent<ShieldMissile>();

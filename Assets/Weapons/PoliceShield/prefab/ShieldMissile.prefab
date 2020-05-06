@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5683771516864450841}
   m_Layer: 2
   m_Name: ShieldMissile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf7f945cae1e96438aafdad4aa66dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   damage: 500
   target: {fileID: 0}

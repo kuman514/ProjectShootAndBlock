@@ -31,6 +31,11 @@ public class LinearProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
+        if (col.gameObject.transform.CompareTag("Projectile"))
+        {
+            return;
+        }
+
         HealthManager hitObjHP = col.gameObject.transform.GetComponent<HealthManager>();
         if (hitObjHP != null)
         {
