@@ -36,9 +36,9 @@ public class FullAutoWeaponManager : MonoBehaviour
     private float curScatter;
 
     // Component References
-    public Transform shootPoint;
+    public GameObject shootPoint;
     public Transform altFirePoint;
-    public Transform pointFlameSpot;
+    public GameObject pointFlameSpot;
 
     public Animator anim;
     public Text ammoUI;
@@ -84,14 +84,14 @@ public class FullAutoWeaponManager : MonoBehaviour
             weaponSound.PlayOneShot(fireSE);
 
             // Shoot point flame
-            GameObject shootFlame = Instantiate(shootFlamePrefab, pointFlameSpot);
+            GameObject shootFlame = Instantiate(shootFlamePrefab, pointFlameSpot.transform);
             Destroy(shootFlame, fireRate);
-            GameObject pointFlame = Instantiate(pointFlamePrefab, pointFlameSpot);
+            GameObject pointFlame = Instantiate(pointFlamePrefab, pointFlameSpot.transform);
             Destroy(pointFlame, fireRate / 2);
 
             // Hit Scan
             RaycastHit hit;
-            if (Physics.Raycast(shootPoint.position, shootPoint.transform.forward + Random.onUnitSphere * curScatter, out hit, shootRange))
+            if (Physics.Raycast(shootPoint.transform.position, shootPoint.transform.forward + Random.onUnitSphere * curScatter, out hit, shootRange))
             {
                 // if hit
                 //Debug.Log(weaponName + " hit / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
@@ -126,6 +126,12 @@ public class FullAutoWeaponManager : MonoBehaviour
             {
                 // if miss
                 //Debug.Log(weaponName + " miss / Remaining ammo: " + currentAmmo + "/" + ammoPerMag);
+            }
+
+            curScatter += scatterIncreasePerRound;
+            if(curScatter > maxScatter)
+            {
+                curScatter = maxScatter;
             }
 
             // Process
@@ -226,6 +232,15 @@ public class FullAutoWeaponManager : MonoBehaviour
                     }
                 }
             }
+        }
+
+        if(curScatter > 0)
+        {
+            curScatter -= (scatterReduction * Time.deltaTime);
+        }
+        else
+        {
+            curScatter = 0;
         }
     }
 
