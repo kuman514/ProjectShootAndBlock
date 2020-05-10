@@ -8,37 +8,26 @@ public class SampleEnemyAttackManager : MonoBehaviour
     public float attackTerm;
 
     // Inner Active
-    private float attackTimer;
     private EnemyAttacks ea;
 
     // Start is called before the first frame update
     void Start()
     {
         ea = this.transform.GetComponent<EnemyAttacks>();
-        attackTimer = 0;
+        StartCoroutine(Attack());
     }
 
     // Update is called once per frame
     void Update()
     {
-        ReduceTimer();
-        Attack();
     }
 
-    void ReduceTimer()
+    IEnumerator Attack()
     {
-        if(attackTimer < attackTerm)
+        while(true)
         {
-            attackTimer += Time.deltaTime;
-        }
-    }
-
-    void Attack()
-    {
-        if(attackTimer >= attackTerm)
-        {
+            yield return new WaitForSeconds(attackTerm);
             ea.SpawnProjectileAttack();
-            attackTimer = 0;
         }
     }
 }

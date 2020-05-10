@@ -994,9 +994,9 @@ MonoBehaviour:
   fireRate: 0.075
   altFireRate: 4
   reloadTime: 1
-  maxScatter: 4
-  scatterIncreasePerRound: 4
-  scatterReduction: 0
+  maxScatter: 0.005
+  scatterIncreasePerRound: 0.002
+  scatterReduction: 0.001
   damagePerRound: 25
   knockbackPerRound: 10
   altFireForce: {x: 0, y: 50, z: 800}
