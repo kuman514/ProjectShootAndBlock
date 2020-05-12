@@ -13,7 +13,7 @@ public class HealthManager : MonoBehaviour
     // None Yet
 
     // References
-    public GameObject destroyWhenHPIs0;
+    public GameObject[] destroyWhenHPIs0;
     public Text HPUI;
 
     // Start is called before the first frame update
@@ -27,7 +27,10 @@ public class HealthManager : MonoBehaviour
     {
         if(curHP <= 0)
         {
-            Destroy(destroyWhenHPIs0);
+            for (int i = destroyWhenHPIs0.Length - 1; i >= 0; i--)
+            {
+                Destroy(destroyWhenHPIs0[i]);
+            }
         }
 
         if(HPUI != null)
