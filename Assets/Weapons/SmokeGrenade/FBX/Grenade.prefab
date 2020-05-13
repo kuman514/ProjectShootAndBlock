@@ -93,12 +93,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secondsToDetonate: 5
-  damageAtCenter: 0
-  damageRange: 0
-  knockbackAtCenter: 0
+  damageAtCenter: 100
+  explodeRange: 3
+  knockbackAtCenter: 60
   detonationEffect: {fileID: 0}
-  detonationSound: {fileID: 0}
-  detonationSpeaker: {fileID: 0}
+  detonationSE: {fileID: 0}
+  collisionSE: {fileID: 0}
 --- !u!54 &54130494031261600
 Rigidbody:
   m_ObjectHideFlags: 0

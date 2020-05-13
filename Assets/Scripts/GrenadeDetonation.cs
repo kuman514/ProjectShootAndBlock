@@ -7,7 +7,7 @@ public class GrenadeDetonation : MonoBehaviour
     // Detonation Specification
     public float secondsToDetonate;
     public float damageAtCenter;
-    public float damageRange;
+    public float explodeRange;
     public float knockbackAtCenter;
 
     // Inner Active
@@ -48,6 +48,16 @@ public class GrenadeDetonation : MonoBehaviour
         if (grenadeAudio != null && detonationSE != null)
         {
             grenadeAudio.PlayOneShot(detonationSE);
+        }
+
+        Collider[] aroundObjs = Physics.OverlapSphere(this.transform.position, explodeRange);
+        foreach (Collider subject in aroundObjs)
+        {
+            HealthManager subjectHealth = subject.transform.GetComponent<HealthManager>();
+            if (subjectHealth != null)
+            {
+                subjectHealth.Damage(damageAtCenter);
+            }
         }
         
         Destroy(objectToDetonate);
