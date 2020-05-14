@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class GrenadeDetonation : MonoBehaviour
@@ -56,7 +57,15 @@ public class GrenadeDetonation : MonoBehaviour
             HealthManager subjectHealth = subject.transform.GetComponent<HealthManager>();
             if (subjectHealth != null)
             {
-                subjectHealth.Damage(damageAtCenter);
+                float proximity = (this.transform.position - subject.transform.position).magnitude;
+                float effect = 1 - (proximity / explodeRange);
+                subjectHealth.Damage(damageAtCenter * effect);
+            }
+
+            Rigidbody subjectRB = subject.transform.GetComponent<Rigidbody>();
+            if (subjectRB != null)
+            {
+                subjectRB.AddExplosionForce(knockbackAtCenter, this.transform.position, explodeRange);
             }
         }
         
