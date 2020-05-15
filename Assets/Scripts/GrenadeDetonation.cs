@@ -25,7 +25,6 @@ public class GrenadeDetonation : MonoBehaviour
     {
         objectToDetonate = this.transform.gameObject;
         grenadeAudio = transform.GetComponent<AudioSource>();
-        Debug.Log(objectToDetonate.name);
     }
 
     // Update is called once per frame
@@ -46,9 +45,9 @@ public class GrenadeDetonation : MonoBehaviour
 
     void Explode()
     {
-        if (grenadeAudio != null && detonationSE != null)
+        if (detonationSE != null)
         {
-            grenadeAudio.PlayOneShot(detonationSE);
+            AudioSource.PlayClipAtPoint(detonationSE, this.transform.position);
         }
 
         Collider[] aroundObjs = Physics.OverlapSphere(this.transform.position, explodeRange);
