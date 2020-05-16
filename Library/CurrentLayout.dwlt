@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 2836
+  controlID: 1490
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 2985
+  controlID: 1491
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 2819
+  controlID: 1492
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b62d0000
+      m_SelectedIDs: 580c0000
       m_LastClickedID: 0
       m_ExpandedIDs: defbffff
       m_RenameOverlay:
@@ -664,20 +664,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Weapons/SmokeGrenade/FBX
+    - Assets/Weapons/VZ61/Sounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Weapons/SmokeGrenade/FBX
+  - Assets/Weapons/VZ61/Sounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\ProjectShootAndBlock
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 178}
-    m_SelectedIDs: ba0b0000
-    m_LastClickedID: 3002
-    m_ExpandedIDs: 00000000b2090000ba090000e6090000740a0000840a00002e0b00005e0b0000ba0b0000620c0000720c0000882b00008a2b00008c2b00008e2b00009a2b0000f02b0000f22b000000ca9a3b
+    scrollPos: {x: 0, y: 238}
+    m_SelectedIDs: 3c0a0000
+    m_LastClickedID: 2620
+    m_ExpandedIDs: 00000000b4090000bc090000e8090000780a0000880a0000320b0000620b0000980b0000c00b0000680c0000780c0000902b0000922b0000942b0000962b0000982b00009a2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -705,7 +705,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b2090000ba090000e6090000740a0000840a00002e0b00005e0b0000ba0b0000620c0000720c0000882b00008a2b00008c2b00008e2b00009a2b0000f02b0000f22b000000ca9a3b
+    m_ExpandedIDs: 00000000b4090000bc090000e8090000780a0000880a0000320b0000620b0000980b0000c00b0000680c0000780c0000902b0000922b0000942b0000962b0000982b00009a2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -732,7 +732,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000000000096a1ffff0c2f00001c380000840b0000f60a0000240a0000e2340000da0c00005a0b0000c60b0000840a0000ae330000e6090000d2320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

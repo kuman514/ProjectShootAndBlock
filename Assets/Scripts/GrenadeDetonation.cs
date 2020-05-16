@@ -13,7 +13,6 @@ public class GrenadeDetonation : MonoBehaviour
 
     // Inner Active
     private GameObject objectToDetonate;
-    private AudioSource grenadeAudio;
 
     // Component Reference
     public GameObject detonationEffect;
@@ -24,23 +23,18 @@ public class GrenadeDetonation : MonoBehaviour
     void Start()
     {
         objectToDetonate = this.transform.gameObject;
-        grenadeAudio = transform.GetComponent<AudioSource>();
+        StartCoroutine(ReduceLifeSpan());
     }
 
     // Update is called once per frame
     void Update()
     {
-        ReduceLifeSpan();
     }
 
-    void ReduceLifeSpan()
+    IEnumerator ReduceLifeSpan()
     {
-        secondsToDetonate -= Time.deltaTime;
-
-        if(secondsToDetonate <= 0)
-        {
-            Explode();
-        }
+        yield return new WaitForSeconds(secondsToDetonate);
+        Explode();
     }
 
     void Explode()
@@ -78,9 +72,9 @@ public class GrenadeDetonation : MonoBehaviour
             Explode();
         }
 
-        if (grenadeAudio != null && collisionSE != null)
+        if (collisionSE != null)
         {
-            grenadeAudio.PlayOneShot(collisionSE);
+            AudioSource.PlayClipAtPoint(collisionSE, this.transform.position);
         }
     }
 }
