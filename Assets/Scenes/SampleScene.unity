@@ -910,7 +910,7 @@ MonoBehaviour:
   scatterReduction: 0.001
   damagePerRound: 25
   knockbackPerRound: 10
-  altFireForce: {x: 0, y: 50, z: 800}
+  altFireForce: {x: 0, y: 0, z: 100}
   infiniteReload: 1
   shootPoint: {fileID: 1922775404}
   altFirePoint: {fileID: 650869112}
@@ -1465,7 +1465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650869111}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.511, y: 0.459, z: 0.197}
+  m_LocalPosition: {x: 0.511, y: 0.459, z: 0.076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 365236432}
