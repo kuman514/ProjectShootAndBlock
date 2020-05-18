@@ -52,7 +52,7 @@ public class GrenadeDetonation : MonoBehaviour
             {
                 float proximity = (this.transform.position - subject.transform.position).magnitude;
                 float effect = 1 - (proximity / explodeRange);
-                subjectHealth.Damage(damageAtCenter * effect);
+                subjectHealth.Damage((int)(damageAtCenter * effect));
             }
 
             Rigidbody subjectRB = subject.transform.GetComponent<Rigidbody>();
