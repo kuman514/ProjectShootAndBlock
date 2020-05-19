@@ -19,7 +19,7 @@ public class HealPlateMethods : MonoBehaviour
         
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
         if(!collision.transform.gameObject.CompareTag("Player"))
         {
