@@ -163,12 +163,14 @@ public class FullAutoWeaponManager : MonoBehaviour
     void Reload()
     {
         // Doesn't Need To (Or Can't) Reload
+        if (infiniteReload && currentAmmo >= ammoPerMag)
+        {
+            return;
+        }
+
         if (currentAmmo >= ammoPerMag || totalAmmo <= 0)
         {
-            if (!infiniteReload)
-            {
-                return;
-            }
+            return;
         }
 
         if (IsReloaded())

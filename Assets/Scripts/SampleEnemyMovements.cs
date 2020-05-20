@@ -27,12 +27,12 @@ public class SampleEnemyMovements : MonoBehaviour
     {
         while(true)
         {
-            float dir1 = Random.Range(-1f, 1f);
+            float dir1 = Random.Range(0, 1f);
             float dir2 = Random.Range(-1f, 1f);
             float dirV = Random.Range(0, 3f);
 
             yield return new WaitForSeconds(1);
-            rb.velocity = new Vector3(dir1, dirV, dir2) * force;
+            rb.velocity = new Vector3(dir1, 0, dir2) * force;
         }
     }
 }
