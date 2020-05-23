@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class ElevatorInteraction : MonoBehaviour
 {
+    // Specification
+    public float senseDistance;
+
     // Inner Active
-    float timer;
     int cur;
+    GameObject[] foundPlayers;
 
     // Component References
     public ElevatorMethod elevator;
@@ -14,20 +17,34 @@ public class ElevatorInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = 0;
         cur = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(timer >= 10)
-        {
-            cur++;
-            elevator.SelectDestFloor(cur % 2);
-            timer = 0;
-        }
+        GetPlayers();
+        GetInteraction();
+    }
 
-        timer += Time.deltaTime;
+    void GetInteraction()
+    {
+        foreach(GameObject p in foundPlayers)
+        {
+            float dist = Vector3.Distance(this.transform.position, p.transform.position);
+            if(dist <= senseDistance)
+            {
+                if (Input.GetKeyDown(InputManager.Interact))
+                {
+                    cur++;
+                    elevator.SelectDestFloor(cur % 2);
+                }
+            }
+        }
+    }
+
+    void GetPlayers()
+    {
+        foundPlayers = GameObject.FindGameObjectsWithTag("Player");
     }
 }
