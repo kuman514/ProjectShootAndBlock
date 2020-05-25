@@ -61,6 +61,12 @@ public class GrenadeDetonation : MonoBehaviour
                 subjectRB.AddExplosionForce(knockbackAtCenter, this.transform.position, explodeRange);
             }
         }
+
+        if (detonationEffect != null)
+        {
+            GameObject grenadeFlame = Instantiate(detonationEffect, this.transform);
+            grenadeFlame.transform.SetParent(null);
+        }
         
         Destroy(objectToDetonate);
     }

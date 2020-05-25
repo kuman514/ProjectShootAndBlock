@@ -97,7 +97,8 @@ MonoBehaviour:
   damageAtCenter: 50
   explodeRange: 10
   knockbackAtCenter: 1000
-  detonationEffect: {fileID: 0}
+  detonationEffect: {fileID: 1782395880954752, guid: 572ada31b139dc149baa8f22a14647c0,
+    type: 3}
   detonationSE: {fileID: 8300000, guid: 1738819b4e3e7bc45904b493e50e9762, type: 3}
   collisionSE: {fileID: 8300000, guid: f4210a9ed7146b34da4f9c73b2542896, type: 3}
 --- !u!54 &54130494031261600
