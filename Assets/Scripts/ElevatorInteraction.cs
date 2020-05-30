@@ -17,7 +17,7 @@ public class ElevatorInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cur = 1;
+        cur = 0;
     }
 
     // Update is called once per frame
