@@ -38,7 +38,7 @@ public class GateButton : MonoBehaviour
                 if (Input.GetKeyDown(InputManager.Interact))
                 {
                     cur++;
-                    //gate.SelectDestFloor(cur % 2);
+                    gate.SelectDestFloor(cur % 2);
                 }
             }
         }

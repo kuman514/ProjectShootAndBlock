@@ -1127,6 +1127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 444116795}
+  - component: {fileID: 444116796}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -1149,6 +1150,22 @@ Transform:
   m_Father: {fileID: 1135788968}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444116796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444116794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e766d4775b2294cbf7cc430e805633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destinationY:
+  - 5
+  - 15
+  speed: 8
 --- !u!1001 &503611455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3012,6 +3029,7 @@ GameObject:
   - component: {fileID: 1591511504}
   - component: {fileID: 1591511503}
   - component: {fileID: 1591511502}
+  - component: {fileID: 1591511505}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -3091,6 +3109,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591511500}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1591511505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591511500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d4bba0d4e65c24ea483bec92d8443f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  senseDistance: 8
+  gate: {fileID: 444116796}
 --- !u!1 &1603230499
 GameObject:
   m_ObjectHideFlags: 0
