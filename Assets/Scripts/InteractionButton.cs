@@ -10,14 +10,17 @@ public class InteractionButton : MonoBehaviour
     // Inner Active
     int cur;
     GameObject[] foundPlayers;
+    AudioSource sound;
 
     // Component References
     public InteractiveElevatingObject objectToElevate;
+    public AudioClip soundEffect;
 
     // Start is called before the first frame update
     void Start()
     {
         cur = 0;
+        sound = this.transform.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,11 +37,7 @@ public class InteractionButton : MonoBehaviour
             float dist = Vector3.Distance(this.transform.position, p.transform.position);
             if (dist <= senseDistance)
             {
-                if (Input.GetKeyDown(InputManager.Interact))
-                {
-                    cur++;
-                    objectToElevate.SelectDestPos(cur % objectToElevate.destinationY.Length);
-                }
+                Interact();
             }
         }
     }
@@ -46,5 +45,19 @@ public class InteractionButton : MonoBehaviour
     void GetPlayers()
     {
         foundPlayers = GameObject.FindGameObjectsWithTag("Player");
+    }
+
+    void Interact()
+    {
+        if (Input.GetKeyDown(InputManager.Interact))
+        {
+            if(sound != null && soundEffect != null)
+            {
+                sound.PlayOneShot(soundEffect);
+            }
+
+            cur++;
+            objectToElevate.SelectDestPos(cur % objectToElevate.destinationY.Length);
+        }
     }
 }

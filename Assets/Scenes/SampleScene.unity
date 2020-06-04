@@ -1164,8 +1164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destinationY:
   - 5
-  - 10
-  speed: 10
+  - 20
+  speed: 5
 --- !u!1001 &503611455
 PrefabInstance:
   m_ObjectHideFlags: 0
