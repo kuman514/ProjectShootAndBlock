@@ -37,7 +37,7 @@ public class InteractionButton : MonoBehaviour
                 if (Input.GetKeyDown(InputManager.Interact))
                 {
                     cur++;
-                    //gate.SelectDestPos(cur % 2);
+                    objectToElevate.SelectDestPos(cur % objectToElevate.destinationY.Length);
                 }
             }
         }

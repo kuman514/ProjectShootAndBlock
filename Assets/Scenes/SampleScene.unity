@@ -1159,13 +1159,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 444116794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5e766d4775b2294cbf7cc430e805633, type: 3}
+  m_Script: {fileID: 11500000, guid: f84c484db6824ea489d04f3352c5c741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destinationY:
   - 5
-  - 15
-  speed: 8
+  - 10
+  speed: 10
 --- !u!1001 &503611455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2847,6 +2847,112 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414578304}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1434822308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1434822309}
+  - component: {fileID: 1434822313}
+  - component: {fileID: 1434822312}
+  - component: {fileID: 1434822311}
+  - component: {fileID: 1434822310}
+  m_Layer: 0
+  m_Name: Button (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1434822309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434822308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.894, y: 2.267, z: -0.14}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 1448071638}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1434822310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434822308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945292e370dce4d4f9bbfe33e1d5e067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  senseDistance: 8
+  objectToElevate: {fileID: 1448071640}
+--- !u!65 &1434822311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434822308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1434822312
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434822308}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1434822313
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434822308}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1448071637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1448071638}
-  - component: {fileID: 1448071639}
+  - component: {fileID: 1448071640}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -2877,10 +2983,11 @@ Transform:
   m_Children:
   - {fileID: 577293164}
   - {fileID: 1868833053}
+  - {fileID: 1434822309}
   m_Father: {fileID: 1135788968}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1448071639
+--- !u!114 &1448071640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2889,13 +2996,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1448071637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae6f291567044f449b3918e898b2a34f, type: 3}
+  m_Script: {fileID: 11500000, guid: f84c484db6824ea489d04f3352c5c741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destinationY:
   - 10
   - 1
-  speed: 2
+  speed: 3
 --- !u!1 &1524471073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3118,11 +3225,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1591511500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5d4bba0d4e65c24ea483bec92d8443f, type: 3}
+  m_Script: {fileID: 11500000, guid: 945292e370dce4d4f9bbfe33e1d5e067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   senseDistance: 8
-  gate: {fileID: 444116796}
+  objectToElevate: {fileID: 444116796}
 --- !u!1 &1603230499
 GameObject:
   m_ObjectHideFlags: 0
@@ -3513,9 +3620,8 @@ GameObject:
   - component: {fileID: 1868833056}
   - component: {fileID: 1868833055}
   - component: {fileID: 1868833054}
-  - component: {fileID: 1868833057}
   m_Layer: 0
-  m_Name: Button
+  m_Name: ControlPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3593,20 +3699,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868833052}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1868833057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1868833052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6026e16b14b7c49acd0f1a9b5e7377, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  senseDistance: 6
-  elevator: {fileID: 1448071639}
 --- !u!1 &1922775404
 GameObject:
   m_ObjectHideFlags: 0
