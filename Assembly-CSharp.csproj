@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BossAttackManager.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacks.cs" />
     <Compile Include="Assets\Scripts\FullAutoWeaponManager.cs" />
     <Compile Include="Assets\Scripts\GrenadeDetonation.cs" />
