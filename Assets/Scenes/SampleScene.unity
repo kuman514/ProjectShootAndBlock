@@ -1280,7 +1280,7 @@ MonoBehaviour:
   scatterReduction: 0.001
   damagePerRound: 25
   knockbackPerRound: 10
-  altFireForce: {x: 0, y: 0, z: 100}
+  altFireForce: {x: 0, y: -30, z: 150}
   infiniteReload: 1
   shootPoint: {fileID: 1922775404}
   altFirePoint: {fileID: 650869112}
@@ -2387,8 +2387,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918892049}
-  - component: {fileID: 918892050}
-  - component: {fileID: 918892051}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -2413,35 +2411,6 @@ Transform:
   m_Father: {fileID: 1135788968}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &918892050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918892048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78119fdca6acdff468aaba95e4594e27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackSpawnPoint: {fileID: 998580171}
-  projectilePrefab: {fileID: 2929726007599803937, guid: 0265e9ad9152806449643a60ae537b8f,
-    type: 3}
-  attackTarget: {fileID: 1603230503}
---- !u!114 &918892051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918892048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114a058f8aec2574c84ed97b601e5a85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackTerm: 1
 --- !u!1 &945226688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,6 +5104,21 @@ PrefabInstance:
       propertyPath: attackTarget
       value: 
       objectReference: {fileID: 1603230503}
+    - target: {fileID: 5099194419116356385, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
+        type: 3}
+      propertyPath: enemyAttackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099194419116356385, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099194419116356390, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5099194419116356397, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
         type: 3}
       propertyPath: m_Name
@@ -5145,5 +5129,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5099194419116356385, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}
+    - {fileID: 5099194419116356390, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}

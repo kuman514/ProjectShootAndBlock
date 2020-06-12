@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 1592
+  controlID: 3043
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 403
-    y: 22
+    x: 401
+    y: 73
     width: 962
-    height: 624
+    height: 628
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -83,9 +83,9 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 962
-      height: 607
+      height: 611
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 481, y: 303.5}
+    m_Translation: {x: 481, y: 305.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -93,14 +93,14 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -481
-      y: -303.5
+      y: -305.5
       width: 962
-      height: 607
+      height: 611
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 962, y: 624}
+  m_LastWindowPixelSize: {x: 962, y: 628}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 1593
+  controlID: 3044
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
-  controlID: 1594
+  controlID: 3045
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,10 +209,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 157}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: bcfbffffdefbffffe60d0000120e0000
+      m_ExpandedIDs: defbffff780d00009a0d0000ea0d0000020e0000120e0000180e0000a20e0000060f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -297,9 +297,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.931106, y: 13.069439, z: -47.285988}
+    m_Target: {x: 4.6702623, y: 2.0983133, z: 7.956232}
     speed: 2
-    m_Value: {x: 6.931106, y: 13.069439, z: -47.285988}
+    m_Value: {x: 4.6702623, y: 2.0983133, z: 7.956232}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -327,13 +327,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.043438658, y: 0.94382495, z: 0.13799644, w: 0.29709357}
+    m_Target: {x: 0.07987534, y: 0.18122058, z: -0.01476967, w: 0.9800821}
     speed: 2
-    m_Value: {x: -0.043438658, y: 0.94382495, z: 0.13799644, w: 0.29709357}
+    m_Value: {x: 0.07987534, y: 0.18122058, z: -0.01476967, w: 0.9800821}
   m_Size:
-    m_Target: 8.573651
+    m_Target: 12.069644
     speed: 2
-    m_Value: 8.573651
+    m_Value: 12.069644
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -480,7 +480,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 3558
+  m_LastSelectedObjectID: 14000
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -500,8 +500,8 @@ MonoBehaviour:
     y: 648
     width: 1367
     height: 299
-  m_MinSize: {x: 232, y: 274}
-  m_MaxSize: {x: 10002, y: 10024}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -546,20 +546,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Projectiles
+    - Assets/Weapons/SmokeGrenade/FBX
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Projectiles
+  - Assets/Weapons/SmokeGrenade/FBX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity\UnityProjects\ProjectShootAndBlock
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: d40a0000
-    m_LastClickedID: 2772
-    m_ExpandedIDs: 00000000ba090000c2090000f0090000800a0000900a0000f40a00003a0b00006a0b0000a20b0000ca0b0000740c0000840c0000a82c0000aa2c0000ac2c0000ae2c0000b02c0000b22c000000ca9a3b
+    scrollPos: {x: 0, y: 398}
+    m_SelectedIDs: cc0b0000
+    m_LastClickedID: 3020
+    m_ExpandedIDs: 00000000bc090000c4090000f2090000820a0000920a0000f60a00003c0b00006c0b0000a40b0000cc0b0000760c0000860c0000b42c0000b62c0000b82c0000ba2c0000bc2c0000be2c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -587,7 +587,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ba090000c2090000f0090000800a0000900a0000f40a00003a0b00006a0b0000a20b0000ca0b0000740c0000840c0000a82c0000aa2c0000ac2c0000ae2c0000b02c0000b22c000000ca9a3b
+    m_ExpandedIDs: 00000000bc090000c4090000f2090000820a0000920a0000f60a00003c0b00006c0b0000a40b0000cc0b0000760c0000860c0000b42c0000b62c0000b82c0000ba2c0000bc2c0000be2c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -612,9 +612,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e60d0000
-    m_LastClickedInstanceID: 3558
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: ea0d0000
+    m_LastClickedInstanceID: 3562
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300000000000096a1ffff0c2f00001c380000840b0000f60a0000240a0000e2340000da0c00005a0b0000c60b0000840a0000ae330000e6090000d2320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

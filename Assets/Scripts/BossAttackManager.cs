@@ -9,11 +9,13 @@ public class BossAttackManager : MonoBehaviour
 
     // Inner Active
     private EnemyAttacks ea;
+    bool seenPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         ea = this.transform.GetComponent<EnemyAttacks>();
+        seenPlayer = false;
         StartCoroutine(Attack());
     }
 
@@ -26,8 +28,21 @@ public class BossAttackManager : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(attackTerm);
-            ea.SpawnProjectileAttack();
+            Seek();
+
+            if(seenPlayer)
+            {
+                ea.SpawnProjectileAttack();
+                yield return new WaitForSeconds(attackTerm);
+            }
+        }
+    }
+
+    void Seek()
+    {
+        if(ea != null)
+        {
+            //seenPlayer = ea.SeekPlayer();
         }
     }
 }

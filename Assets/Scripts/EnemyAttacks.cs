@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttacks : MonoBehaviour
 {
     // Enemy Attack Specification
-    // None Yet
+    public float enemyAttackRange;
 
     // Inner Active
     // None Yet
@@ -36,5 +36,18 @@ public class EnemyAttacks : MonoBehaviour
     {
         GameObject projectileObject = Instantiate(projectilePrefab, attackSpawnPoint);
         projectileObject.transform.SetParent(null);
+    }
+
+    public bool SeekPlayer()
+    {
+        /*
+        RaycastHit onRadar;
+
+        if (Physics.Raycast(attackSpawnPoint.transform.position, attackSpawnPoint.transform.forward, out onRadar, enemyAttackRange))
+        {
+            return true;
+        }
+        */
+        return false;
     }
 }
