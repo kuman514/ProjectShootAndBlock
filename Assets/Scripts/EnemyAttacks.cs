@@ -40,14 +40,13 @@ public class EnemyAttacks : MonoBehaviour
 
     public bool SeekPlayer()
     {
-        /*
         RaycastHit onRadar;
 
         if (Physics.Raycast(attackSpawnPoint.transform.position, attackSpawnPoint.transform.forward, out onRadar, enemyAttackRange))
         {
             return true;
         }
-        */
+
         return false;
     }
 }

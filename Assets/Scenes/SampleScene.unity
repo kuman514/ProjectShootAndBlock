@@ -5112,12 +5112,12 @@ PrefabInstance:
     - target: {fileID: 5099194419116356385, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5099194419116356390, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5099194419116356397, guid: 8a00cbeee198ef54d9ecee3a20beeae4,
         type: 3}
@@ -5129,7 +5129,5 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5099194419116356385, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}
-    - {fileID: 5099194419116356390, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a00cbeee198ef54d9ecee3a20beeae4, type: 3}

@@ -9,10 +9,12 @@ public class SampleEnemyAttackManager : MonoBehaviour
 
     // Inner Active
     private EnemyAttacks ea;
+    private bool isPlayerFound;
 
     // Start is called before the first frame update
     void Start()
     {
+        isPlayerFound = false;
         ea = this.transform.GetComponent<EnemyAttacks>();
         StartCoroutine(Attack());
     }
@@ -20,14 +22,20 @@ public class SampleEnemyAttackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isPlayerFound = ea.SeekPlayer();
     }
 
     IEnumerator Attack()
     {
         while(true)
         {
-            yield return new WaitForSeconds(attackTerm);
-            ea.SpawnProjectileAttack();
+            if(isPlayerFound)
+            {
+                ea.SpawnProjectileAttack();
+                yield return new WaitForSeconds(attackTerm);
+            }
+
+            yield return new WaitForSeconds(0);
         }
     }
 }
