@@ -66,6 +66,7 @@ public class GrenadeDetonation : MonoBehaviour
         {
             GameObject grenadeFlame = Instantiate(detonationEffect, this.transform);
             grenadeFlame.transform.SetParent(null);
+            Destroy(grenadeFlame, 2f);
         }
         
         Destroy(objectToDetonate);
