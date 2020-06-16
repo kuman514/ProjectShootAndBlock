@@ -2387,6 +2387,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918892049}
+  - component: {fileID: 918892051}
+  - component: {fileID: 918892050}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -2411,6 +2413,36 @@ Transform:
   m_Father: {fileID: 1135788968}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918892050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918892048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78119fdca6acdff468aaba95e4594e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAttackRange: 50
+  attackSpawnPoint: {fileID: 998580171}
+  projectilePrefab: {fileID: 2929726007599803937, guid: 0265e9ad9152806449643a60ae537b8f,
+    type: 3}
+  attackTarget: {fileID: 1603230503}
+--- !u!114 &918892051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918892048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5638eeaa89587f543ae0205ba2b32f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTerm: 1
 --- !u!1 &945226688
 GameObject:
   m_ObjectHideFlags: 0
