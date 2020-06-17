@@ -44,7 +44,8 @@ public class EnemyAttacks : MonoBehaviour
 
         if (Physics.Raycast(attackSpawnPoint.transform.position, attackSpawnPoint.transform.forward, out onRadar, enemyAttackRange))
         {
-            return true;
+            if(onRadar.transform.gameObject.CompareTag("Player"))
+                return true;
         }
 
         return false;
