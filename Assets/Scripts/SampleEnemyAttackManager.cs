@@ -22,7 +22,7 @@ public class SampleEnemyAttackManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isPlayerFound = ea.SeekPlayer();
+        isPlayerFound = ea.GetPlayerSeeked();
     }
 
     IEnumerator Attack()
@@ -32,6 +32,12 @@ public class SampleEnemyAttackManager : MonoBehaviour
             if(isPlayerFound)
             {
                 ea.SpawnProjectileAttack();
+                yield return new WaitForSeconds(0.1f);
+                ea.SpawnProjectileAttack();
+                yield return new WaitForSeconds(0.1f);
+                ea.SpawnProjectileAttack();
+                yield return new WaitForSeconds(0.1f);
+
                 yield return new WaitForSeconds(attackTerm);
             }
 

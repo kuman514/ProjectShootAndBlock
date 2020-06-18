@@ -8,7 +8,7 @@ public class EnemyAttacks : MonoBehaviour
     public float enemyAttackRange;
 
     // Inner Active
-    // None Yet
+    private bool playerFound;
 
     // Component References
     public Transform attackSpawnPoint;
@@ -18,13 +18,14 @@ public class EnemyAttacks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerFound = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(attackTarget);
+        SeekPlayer();
     }
 
     public void SpawnRaycastAttack()
@@ -38,16 +39,24 @@ public class EnemyAttacks : MonoBehaviour
         projectileObject.transform.SetParent(null);
     }
 
-    public bool SeekPlayer()
+    void SeekPlayer()
     {
         RaycastHit onRadar;
 
         if (Physics.Raycast(attackSpawnPoint.transform.position, attackSpawnPoint.transform.forward, out onRadar, enemyAttackRange))
         {
-            if(onRadar.transform.gameObject.CompareTag("Player"))
-                return true;
+            if (onRadar.transform.gameObject.CompareTag("Player"))
+            {
+                playerFound = true;
+                return;
+            }
         }
 
-        return false;
+        playerFound = false;
+    }
+
+    public bool GetPlayerSeeked()
+    {
+        return playerFound;
     }
 }
